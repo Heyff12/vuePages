@@ -1,0 +1,152 @@
+header
+  width: 10rem
+  height: 7.493rem
+  overflow: hidden
+  position: relative
+  img
+    width: 100%
+    min-height: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%,-50%)
+    -moz-transform: translate(-50%,-50%)
+    -ms-transform: translate(-50%,-50%)
+    -o-transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%)
+  div
+    position: absolute
+    top: 0
+    left: 0
+    width: 10rem
+    height: 7.493rem
+    background-image: -webkit-gradient(linear, left top, left bottom,color-stop(46%,rgba(0,0,0,0.00)), color-stop(100%,rgba(0,0,0,0.91)))
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.00) 46%, rgba(0,0,0,0.91) 100%)
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 46%, rgba(0,0,0,0.91) 100%)
+    h1
+      font-family: STHeitiSC-Medium
+      font-size: $fr1
+      color: $white
+      line-height: $fr1
+      position: absolute
+      bottom: 0.53333rem
+      left: 0.37333rem
+      padding-right: 0.37333rem
+section
+  .has-bought
+    background-color: #fff
+    height: 1.0666rem
+    line-height: 1.0666rem
+    overflow: hidden
+    padding: 0 0.4rem
+    p
+      font-size: $fr4
+      color: #A7A9AE
+      float: right
+      span
+        color: $orange
+    div
+      img
+        width: 0.66666rem
+        height: 0.66666rem
+        border-radius: 0.66666rem
+        margin-right: 0.26666rem
+        vertical-align: middle
+  .price
+    background-color: #fff
+    height: 1.52rem
+    padding: 0 0.13rem 0 0.4rem
+    p
+      font-size: 0.74666rem
+      color: $orange
+      line-height: 1.52rem
+      span
+        font-size: 0.45333rem
+        color: $gray
+        line-height: 0.48rem
+        text-decoration: line-through
+      a
+        display: block
+        width: 3.46rem
+        height: 1.06rem
+        line-height: 1.06rem
+        background-color: #8a8c92
+        border-radius: 0.13rem
+        float: right
+        margin: 0.26rem 0.26rem 0 0
+        font-size: 0.53rem
+        text-align: center
+        color: $white
+        &.sale-out
+          background-color: $lightGray
+  .last-time
+    background-color: #fff
+    height: 1.0666rem
+    line-height: 1.0666rem
+    overflow: hidden
+    padding: 0 0.4rem
+    p
+      font-size: $fr3
+      span
+        color: $orange
+      em
+        font-size: $fr4
+        float: right
+        color: $gray
+        i
+          color: $lightBlack
+  .sale-detail
+    padding: 0 .4rem
+    background-color: #fff
+    > h3
+      height: 1.06666rem
+      line-height: 1.06666rem
+      font-size: 0.4rem
+      color: #8a8c92
+    > p
+      padding: 0.4rem 0
+      font-size: $fr3
+      line-height: 1.5
+    .shop-info
+      padding: 0.4rem 0
+      > img
+        width: 1.41rem
+        height: 1.06666rem
+        float: left
+      p
+        padding-left: 0.26rem
+        line-height: 1.5
+        word-wrap: break-word
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        &.business-name
+          font-size: $fr3
+          color: $midBlack
+          font-weight: bold
+          i
+            display: inline-block
+            margin-left: 0.13rem
+
+        &.business-address
+          font-size: $fr6
+          color: $gray
+  .tips
+    padding: 0 0.4rem
+    background-color: #fff
+    > div
+      h3
+        height: 1.06666rem
+        line-height: 1.06666rem
+        font-size: $fr3
+        color: $aluminium
+      .tips-content
+        padding: 0.13333*2rem 0
+        p
+          font-size: $fr3
+          line-height: 1.8
+          span
+            color: $orange
+            white-space: pre
+        .huise
+          color: #8a8c92

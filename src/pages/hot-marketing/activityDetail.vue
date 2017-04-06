@@ -16,15 +16,18 @@
       <div class="hot-detail-content">
         <img :src="act.subContent" alt="" style="width: 100%">
       </div>
-      <div class="swiper-container">
+      <div v-if="act.subCarousel.length === 1" class="single">
+        <img :src="act.subCarousel[0]"/>
+      </div>
+      <div class="swiper-container" v-else>
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img :src="act.subCarousel">
+          <div class="swiper-slide" v-for="item in act.subCarousel">
+            <img :src="item">
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <div class="join-btn" v-link="{ name: 'preview', params: {activityid: activity_id,status: is_end} }" @click="postPreviewRecord2()">立即加入</div>
+      <div class="join-btn" :class="{'bg-color': isBaipaiApp}" v-link="{ name: 'preview', params: {activityid: activity_id,status: is_end} }" @click="postPreviewRecord2()">立即加入</div>
     </div>
   </div>
 </template>
@@ -216,24 +219,24 @@
           }
         }
       }
-      .swiper-container{
+      .single, .swiper-container{
         width: 690px;
         height: 518px;
         margin: 0 auto;
         margin-top: 30px;
         border-radius: 6px;
-        .swiper-wrapper{
-          width: 750px;
-        }
-      }
-      .swiper-slide{
-        width: 690px;
-        height: 518px;
         img{
           display: block;
           width: 100%;
           height: 100%;
         }
+      }
+      .swiper-wrapper{
+        width: 750px;
+      }
+      .swiper-slide{
+        width: 690px;
+        height: 518px;
       }
       .swiper-container {
         padding: 0;
@@ -267,20 +270,28 @@
         background: #FF8100;
         font-size: 34px;
         color: #FFFFFF;
+        &.bg-color {
+          background-color:#3971E0
+        }
       }
     }
 </style>
 <script type="text/ecmascript-6">
   /* global Swiper, _hmt */
   import config from '../../methods/config'
+  import util from '../../methods/util'
 //  import bridge from '../../methods/bridge'
   export default{
     data () {
       return {
         activity_id: '',
         is_end: '',
-        act: {}
+        act: {},
+        isBaipaiApp: true
       }
+    },
+    created: function () {
+      this.isBaipaiApp = util.isBaipaiApp()
     },
     attached () {
       /* eslint-disable no-new */

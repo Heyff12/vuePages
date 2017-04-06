@@ -13,7 +13,7 @@
 <style>
   .weui_mask {
     position: fixed;
-    z-index: 1;
+    z-index: 111;
     width: 100%;
     height: 100%;
     top: 0;
@@ -22,7 +22,7 @@
   }
   .weui_dialog {
     position: fixed;
-    z-index: 13;
+    z-index: 113;
     width: 85%;
     top: 50%;
     left: 50%;

@@ -8,7 +8,7 @@
       <div>
         <p>验证码</p>
         <input type="tel" placeholder="请输入收到的短信验证码" v-model="code">
-        <a v-if="!gotCode" @click.prevent="getCode">获取验证码</a>
+        <a v-if="!gotCode" :class="{'bg-color': isBaipaiApp}" @click.prevent="getCode">获取验证码</a>
         <a v-else v-text="count + '秒后获取'" class="gotCode"></a>
       </div>
       <div>
@@ -17,14 +17,14 @@
         <img :src="icon" @click="toggleIcon" :class="{'show':showPwd}">
       </div>
     </div>
-    <a @click.prevent="submit" class="submit">提交</a>
+    <a @click.prevent="submit" class="submit" :class="{'bg-color': isBaipaiApp}">提交</a>
     <toast :msg.sync="errmsg"></toast>
   </div>
 </template>
 
 <script>
 import config from '../../methods/config'
-// import util from '../../methods/util'
+import util from '../../methods/util'
 import bridge from '../../methods/bridge'
 import toast from '../../components/tips/toast.vue'
 import iconHide from './assets/icon-hide.png'
@@ -43,12 +43,12 @@ export default {
       mobile: '',
       code: '',
       password: '',
-      errmsg: ''
+      errmsg: '',
+      isBaipaiApp: true
     }
   },
-  computed: {
-  },
   created: function () {
+    this.isBaipaiApp = util.isBaipaiApp()
   },
   watch: {
     'showPwd' () {
@@ -58,9 +58,6 @@ export default {
         this.icon = iconHide
       }
     }
-  },
-  ready: function () {
-
   },
   methods: {
     toggleIcon () {
@@ -199,6 +196,10 @@ export default {
         font-size: 30px;
         margin-right: 20px;
         margin-top: 12px;
+        &.bg-color {
+          border-color: #3971E0;
+          color: #3971E0;
+        }
         &.gotCode {
           border: 2px solid #e5e5e5;
           color: #A7A9AE;
@@ -227,5 +228,8 @@ export default {
     background-color: #FF8100;
     color: #FFFFFF;
     font-size: 34px;
+    &.bg-color {
+      background-color: #3971E0;
+    }
   }
 </style>

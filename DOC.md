@@ -16,7 +16,7 @@
 			| xxx
 				| index.js
 				| index.ejs
-				| main.vue		
+				| main.vue
 	|static         *** 公共库 不支持require的库
 	|.babelrc       *** babel 配置文件
 	|.eslintrc.js   *** eslint 配置文件
@@ -24,11 +24,11 @@
 	|package.json   *** npm配置文件
 ```
 > `npm run dev` 启动开发模式 页面为 localhost:{端口}/xxx.html
-	
+
 > `npm run build_test` 会将所有的接口host替换为测试host,同时静态资源路径替换为"/near-v2/static/xx.xx",html 路径为 'near-v2/xx.html'
 
 > `npm run build` 会将所有的接口host正式host,同时静态资源路径替换为"/near-v2/static/xx.xx",html 路径为 'near-v2/xx.html'
-> 
+>
 > `npm run build_online` 会将所有的接口host正式host,同时静态资源路径替换为"{七牛仓库地址}/near-v2/static/xx.xx",html 路径为 'near-v2/xx.html'
 
 > `npm run build_offline` 打离线包,提供给客户端,离线页面需在appconfig.js中将supportOffline设置为true,会将所有的接口host正式host,同时静态资源路径替换为"/static/xx.xx",html 路径为 'xx.html'
@@ -46,7 +46,7 @@
 	- coupon-review 红包统计
 	- data-record 商家结案报告
 	- diancan-manage 商家点餐商品管理
-	- hot-marketing 热点营销页面 
+	- hot-marketing 热点营销页面
 	- jsbirdge-demo jsBridge 第二版测试页面
 	- member-service 好近服务开通页面
 	- merchant-loan 商家贷款页面
@@ -62,3 +62,17 @@
 	- trade-statistics 商家交易统计
 	- vip-introduction 会员介绍
 	- wx-diancan-intro 点餐介绍
+
+页面方面上面都有写到
+
+这个是b端的新项目， 地址还是 http://wx.qfpay.com/near-v2/ + 页面的地址
+
+页面地址在appConfig 这个文件里 就可以找到了
+
+这个项目测试部署都是由测试去完成， 测试环境的地址就是 https://wx.qa.qfpay.net/near-v2/
+
+灰度和线上的环境  只要在公司内网都是灰度的环境   如果想看正式的页面呢  就需要开4g
+
+
+
+

@@ -84,7 +84,7 @@
           nextButton: '.arrow',
           observer: true,
           onSlideChangeEnd: function (swiper) {
-            if (swiper.activeIndex === 4) {
+            if (swiper.activeIndex === 3) {
               _this.arrow = false
             } else {
               _this.arrow = true

@@ -194,5 +194,22 @@ exports.pages = [
     title: 'JSBridge测试',
     template: 'src/pages/jsbridge-demo/index.ejs',
     chunks: 'vue_vue-resource'
+  },
+  {
+    filename: 'save-currency',
+    title: '会员储值优秀案例',
+    template: 'src/pages/save-currency/index.ejs',
+    chunks: 'vue_vue-resource'
+  },
+  {
+    filename: 'save-currency-agreement',
+    title: '储值服务协议',
+    chunks: 'vue_vue-resource'
+  },
+  {
+    filename: 'business-king-intro',
+    title: '好近生意王',
+    template: 'src/pages/business-king-intro/index.ejs',
+    chunks: 'vue_vue-resource'
   }
 ]

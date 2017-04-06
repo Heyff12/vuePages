@@ -29,12 +29,13 @@ export default {
   .c-toast {
     position: fixed;
     z-index: 999999;
+    font-size: 27px;
     bottom: 1.5rem;
     left: 50%;
     border-radius: 0.15rem;
     padding: .35rem .5rem;
     min-height: 81.5px;
-    background-color: #FF8100;
+    background-color: #4f4f57;
     color: #fff;
     text-align: center;
     animation-fill-mode: both;

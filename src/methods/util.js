@@ -15,6 +15,10 @@ let isAndroid = function () {
   var ua = navigator.userAgent
   return ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1
 }
+let isBaipaiApp = function () {
+  let ua = navigator.userAgent
+  return ua.indexOf('bggroupid') !== -1
+}
 
 // 获取 url 请求参数
 let getRequestParams = function (url) {
@@ -49,5 +53,6 @@ exports.isWX = isWX()
 exports.isAPP = isAPP()
 exports.isAndroid = isAndroid()
 exports.getRequestParams = getRequestParams
+exports.isBaipaiApp = isBaipaiApp
 exports.checkEmail = checkEmail
 exports.isEmptyObject = isEmptyObject
